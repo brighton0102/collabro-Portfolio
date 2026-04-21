@@ -1,0 +1,169 @@
+:root {
+    --bg-dark: #08080b;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --primary-gradient: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    --accent-color: #10b981;
+    --text-main: #ff7200;
+    --text-dim: #a1a1aa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+.cta-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.bg-glow {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-content {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.badge {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: clamp(40px, 8vw, 72px);
+    margin: 20px 0;
+    font-weight: 800;
+}
+
+h1 span {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    color: var(--text-dim);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Button Styling */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.btn-secondary {
+    background: white;
+    color: black;
+}
+
+.btn-accent {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Services Visuals */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    text-align: center;
+    padding-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.service-card:hover img {
+    opacity: 1;
+}
+
+.service-card h3 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
