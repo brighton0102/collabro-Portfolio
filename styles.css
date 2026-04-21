@@ -1,0 +1,123 @@
+/* HEADER */
+.header {
+  height: 80px;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* LOGO */
+.logo {
+  color: #00f0ff;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: url('heropic.jpeg') no-repeat center center/cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* TEXT CONTENT */
+.hero-content {
+  flex: 1;
+}
+
+.hero-subtitle {
+  color: #807d7d;
+  margin-bottom: 10px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  color: #000000;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background: #000000;
+  color: #ffffff;
+}
+
+.btn.primary:hover {
+  background: #00c8d7;
+}
+
+.btn.secondary {
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+
+.btn.secondary:hover {
+  background: #00f0ff;
+  color: #000;
+}
+
+/* IMAGE */
+.hero-image img {
+  max-width: 450px;
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+  }
+}
