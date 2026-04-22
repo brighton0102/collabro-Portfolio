@@ -1,0 +1,283 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS custom properties for scalable spacing & theming */
+    :root {
+      --bg-primary: #000000;
+      --card-bg: #0a0a0a;
+      --border-green: #2e7d32;
+      --accent-green: #86ef86;
+      --text-white: #ffffff;
+      --text-muted: #bcbcbc;
+      --transition-default: 0.25s ease;
+      --border-radius-card: 2rem;
+      --gap-base: 2rem;
+      --padding-body: 3rem 1.5rem;
+      --max-width-grid: 1280px;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: var(--text-white);
+      line-height: 1.5;
+      padding: var(--padding-body);
+      transition: padding 0.2s;
+    }
+
+    /* main container for the 3 insight divisions */
+    .insights-grid {
+      max-width: var(--max-width-grid);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--gap-base);
+      justify-content: center;
+      align-items: stretch;
+      transition: gap 0.2s ease;
+    }
+
+    /* each card = division */
+    .insight-card {
+      flex: 1 1 300px;
+      background: var(--card-bg);
+      border-radius: var(--border-radius-card);
+      overflow: hidden;
+      transition: transform var(--transition-default), box-shadow 0.3s ease, border-color 0.2s;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.6);
+      border: 1px solid #1e2a1e;
+    }
+
+    .insight-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 36px -14px rgba(100, 255, 100, 0.18);
+      border-color: var(--border-green);
+    }
+
+    /* image wrapper - consistent aspect ratio and scalable cropping */
+    .card-img {
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      background-color: #0f0f0f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      display: block;
+    }
+
+    .insight-card:hover .card-img img {
+      transform: scale(1.03);
+    }
+
+    /* content area */
+    .card-content {
+      padding: 1.8rem 1.5rem 2rem 1.5rem;
+      text-align: center;
+    }
+
+    /* main paragraph with green accent & clean white text */
+    .insight-headline {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-white);
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .accent-green {
+      color: var(--accent-green);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .insight-description {
+      font-size: 1rem;
+      color: #e0e0e0;
+      line-height: 1.5;
+      margin-top: 0.5rem;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+
+    /* responsive typography & spacing */
+    @media (max-width: 780px) {
+      body {
+        padding: 2rem 1rem;
+      }
+      .insight-headline {
+        font-size: 1.25rem;
+      }
+      .insight-description {
+        font-size: 0.95rem;
+      }
+      .card-content {
+        padding: 1.5rem 1.2rem;
+      }
+      .card-img {
+        height: 210px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .insight-headline {
+        font-size: 1.15rem;
+      }
+      .insight-description {
+        font-size: 0.9rem;
+      }
+      .card-img {
+        height: 180px;
+      }
+    }
+
+    /* page header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      transition: margin 0.2s;
+    }
+
+    .page-header h1 {
+      font-size: clamp(2rem, 8vw, 3rem);
+      font-weight: 700;
+      background: linear-gradient(120deg, #ffffff, #b9f6ca);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .green-divider {
+      width: 80px;
+      height: 3px;
+      background: #4caf50;
+      margin: 0.75rem auto 0;
+      border-radius: 4px;
+      transition: width 0.2s;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      border-bottom: 1px dashed #2e5c2e;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    /* footer styling */
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.85rem;
+      color: #6c6f6c;
+      border-top: 1px solid #1e2a1a;
+      padding-top: 2rem;
+      transition: margin-top 0.2s;
+    }
+
+    /* scaling controls — dynamic resize widget */
+    .scaling-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      background: rgba(30, 30, 30, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 0.8rem 1.5rem;
+      border-radius: 60px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid #2a3a2a;
+    }
+
+    .scale-btn {
+      background: #1a2a1a;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      width: 42px;
+      height: 42px;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .scale-btn:hover {
+      background: #2e7d32;
+      transform: scale(1.02);
+    }
+
+    .scale-value {
+      background: #0a0a0a;
+      padding: 0.4rem 1rem;
+      border-radius: 32px;
+      font-family: monospace;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: 1px solid #3a5a3a;
+      min-width: 80px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .reset-scale {
+      background: #2c2c2c;
+      padding: 0 1rem;
+      font-size: 0.9rem;
+      width: auto;
+    }
+
+    .scale-note {
+      font-size: 0.75rem;
+      color: #9bbf8f;
+      margin-left: 0.5rem;
+    }
+
+    /* layout scaling wrapper */
+    .scalable-wrapper {
+      transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      transform-origin: top center;
+    }
+
+    /* optional dynamic scaling helper */
+    body.scale-transition * {
+      transition: all 0.2s ease;
+    }
+
+    /* accessibility & performance */
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+    }
+
+    button:focus-visible {
+      outline: 2px solid #86ef86;
+      outline-offset: 2px;
+    }
