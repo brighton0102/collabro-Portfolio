@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #1e3a8a, #2563eb);
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* SERVICES */
+.service-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-box div {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+/* MISSION */
+.mission {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.mission div {
+    max-width: 400px;
+}
+
+/* SOCIAL */
+.social-links a {
+    margin: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* CTA */
+.cta {
+    background: #2563eb;
+}
+
+.cta a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: white;
+    color: #2563eb;
+    text-decoration: none;
+    border-radius: 5px;
+}
