@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collabro Software Solutions Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --bg-color: #0a0a0a;
+            --accent-color: #00ffc3;
+            --text-color: #ffffff;
+            --text-muted: #a0a0a0;
+            --card-bg: #1a1a1a;
+            --input-bg: #262626;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .footer {
+            background-color: var(--bg-color);
+            padding: 80px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        /* Left Section */
+        
+        .left-section {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .top-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .link-item i {
+            color: var(--accent-color);
+            font-size: 18px;
+        }
+        
+        .link-item:hover {
+            color: var(--text-color);
+        }
+        
+        .newsletter-box {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .newsletter-title {
+            font-size: 24px;
+            font-weight: 600;
+            max-width: 350px;
+            line-height: 1.3;
+        }
+        
+        .subscription-card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .email-input {
+            background-color: var(--input-bg);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 12px;
+            color: var(--text-color);
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .subscribe-btn {
+            background-color: var(--accent-color);
+            color: #000;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        .subscribe-btn:hover {
+            opacity: 0.9;
+        }
+        
+        .social-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .social-label {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            background-color: var(--input-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: #333;
+        }
+        /* Right Section */
+        
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .tagline {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            border-top: 1px solid #333;
+            padding-top: 30px;
+        }
+        
+        .info-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .info-label {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .info-value {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+        
+        .quick-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-top: 1px solid #333;
+            padding-top: 30px;
+        }
+        
+        .quick-links-title {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+        .links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        /* Large Text Background */
+        
+        .work-together {
+            margin-top: 60px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .work-outline {
+            font-size: 120px;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--accent-color);
+            line-height: 0.8;
+            text-transform: uppercase;
+        }
+        
+        .together-solid {
+            font-size: 120px;
+            font-weight: 700;
+            color: var(--text-color);
+            line-height: 0.8;
+            text-transform: uppercase;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .work-outline,
+            .together-solid {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <footer class="footer">
+        <div class="container">
+            <!-- Left Column -->
+            <div class="left-section">
+                <div class="top-links">
+                    <a href="#" class="link-item"><i class="far fa-circle-check"></i> Insight</a>
+                    <a href="#" class="link-item"><i class="far fa-circle-check"></i> Pricing</a>
+                </div>
+
+                <div class="newsletter-box">
+                    <h3 class="newsletter-title">Subscribe to our websites</h3>
+                    <div class="subscription-card">
+                        <input type="email" class="email-input" placeholder="hello@collabro.com">
+                        <button class="subscribe-btn">Subscribe Now</button>
+                    </div>
+                </div>
+
+                <div class="social-section">
+                    <h4 class="social-label">Social Icon</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fas fa-basketball-ball"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-section">
+                <h2 class="tagline">Crafting high performance Your websites & digital products</h2>
+
+                <div class="contact-info">
+                    <div class="info-group">
+                        <h4 class="info-label">Contact Us</h4>
+                        <p class="info-value">+263 771089529</p>
+                    </div>
+                    <div class="info-group">
+                        <h4 class="info-label">Email</h4>
+                        <p class="info-value">collabrosoftwares@gmail.com</p>
+                    </div>
+                    <div class="info-group">
+                        <h4 class="info-label">Office</h4>
+                        <p class="info-value">Showground ,<br>Samora Macheal Avenue</p>
+                    </div>
+                </div>
+
+                <div class="quick-links">
+                    <h4 class="quick-links-title">Quick Links</h4>
+                    <div class="links-grid">
+                        <a href="#" class="link-item"><i class="far fa-circle-check"></i> Home</a>
+                        <a href="#" class="link-item"><i class="far fa-circle-check"></i> About</a>
+                        <a href="#" class="link-item"><i class="far fa-circle-check"></i> Services</a>
+                        <a href="#" class="link-item"><i class="far fa-circle-check"></i> Works</a>
+                        <a href="#" class="link-item"><i class="far fa-circle-check"></i> Insight</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-together">
+            <div class="work-outline">Work</div>
+            <div class="together-solid">Together</div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
